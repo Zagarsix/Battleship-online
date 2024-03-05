@@ -88,14 +88,24 @@ margin-left: 330px;
     color: rgb(26, 9, 106);
     text-shadow: 0 0 0.2em rgb(227, 101, 4), 0 0 0.2em rgb(255, 0, 0), 0 0 0.2em rgb(255, 0, 0);
 }
+
 .instruccions{
 color: orangered;
 -webkit-text-stroke: 1px black;
-
 }
 
 #gamerBoard{
     margin-bottom: 200px;
+}
+
+#Winner{
+color: green;
+text-shadow: 0 0 0.2em blue, 0 0 0.2em green;
+}
+
+#Loser{
+color: white;
+text-shadow: 0 0 0.2em red, 0 0 0.2em red;
 }
 
 .footer {

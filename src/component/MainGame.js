@@ -244,13 +244,13 @@ function MainGame() {
 			<div className='headline text-center p-2 mt-2'>
 				{/* Título depende del turno de jugador */}
 				{store.isPlayerTurn ? <h2 className='btn btn-success'>Te toca disparar!</h2> : <h2 className='btn btn-danger'>Dispara tu enemigo!</h2>}
-				{store.gameOver ? (!store.isPlayerTurn ? <h1>Has ganado! Increíble juego!</h1> : <h1>Has perdido! Tu enemigo es más fuerte!</h1>) : null}
+				{store.gameOver ? (!store.isPlayerTurn ? <h1 id="Winner">Has ganado! Increíble juego!</h1> : <h1 id="Loser">Has perdido! Tu enemigo es más fuerte!</h1>) : null}
 			</div>
 			<div className='btn btn-outline-danger' id="ShowBoat" onClick={() => { actions.toggleShowBoat() }}>Mostrar barcos</div>
 			{/* Div principal, contiene ambos tableros */}
 			<div className='gameboard'>
 				<div className='playerboard'>
-					<div className='board-header text-center' style={{ color: "blue" }}>
+					<div className='board-header text-center' style={{ color: "green" }}>
 						<h2>TU TABLERO</h2>
 					</div>
 					<PlayerBoard />
