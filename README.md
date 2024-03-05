@@ -11,7 +11,7 @@
 
 1. Clonar el repositorio:
 
-    $ git clone git@github.com:Zagarsix/Battleship-with-React.js.git
+    $ git clone git@github.com:Zagarsix/Battleship-online.git
 
 2. Crear un archivo .env:
 
