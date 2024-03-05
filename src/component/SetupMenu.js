@@ -14,16 +14,18 @@ function SetupMenu() {
     }
 
     return (
-        <>
-            <h1 className='text-center p-3' id="SuperTitle">"Battleship with React.js"</h1>
-            {store.fiveGridBoat === 1 ? <h3 className='text-center p-2'>Posiciona tu portaaviones (5 espacios)! </h3> : null}
-            {store.fourGridBoat >= 1 && store.fiveGridBoat === 0 ?  <h3 className='text-center p-2'>Posiciona tus acorazados (4 espacios)! </h3> : null }
-            {store.threeGridBoat >= 1 && store.fiveGridBoat === 0 && store.fourGridBoat === 0 ?  <h3 className='text-center p-2'>Posiciona tus cruceros (3 espacios)! </h3> : null }
-            {store.twoGridBoat === 1 && store.fiveGridBoat === 0 && store.fourGridBoat === 0 && store.threeGridBoat === 0 ?  <h3 className='text-center p-2'>Posiciona tu buque (2 espacios)!</h3> : null }
-            {store.twoGridBoat === 0 && store.fiveGridBoat === 0 && store.fourGridBoat === 0 && store.threeGridBoat === 0 ?  <h3 className='text-center p-2'>¿Estás preparado? Fuego!</h3> : null }
+		<>
+		 <h1 className='text-center p-3 fw-bold' id="SuperTitle">BATTLESHIP: Tactics and strategy</h1>
+        <div className='d-flex p-4 my-4 justify-content-evenly'>
+			<div className='instruccions p-4  mt-4 fw-bold'>
+            {store.fiveGridBoat === 1 ? <h4 className='text-center p-2'>Posiciona tu portaaviones (5 espacios)! </h4> : null}
+            {store.fourGridBoat >= 1 && store.fiveGridBoat === 0 ?  <h4 className='text-center p-2'>Posiciona tus acorazados (4 espacios)! </h4> : null }
+            {store.threeGridBoat >= 1 && store.fiveGridBoat === 0 && store.fourGridBoat === 0 ?  <h4 className='text-center p-2'>Posiciona tus cruceros (3 espacios)! </h4> : null }
+            {store.twoGridBoat === 1 && store.fiveGridBoat === 0 && store.fourGridBoat === 0 && store.threeGridBoat === 0 ?  <h4 className='text-center p-2'>Posiciona tu buque (2 espacios)!</h4> : null }
+            {store.twoGridBoat === 0 && store.fiveGridBoat === 0 && store.fourGridBoat === 0 && store.threeGridBoat === 0 ?  <h4 className='text-center p-2'>¿Estás preparado? Fuego!</h4> : null }
             
             {/* Elige la ubicación de las naves */}
-            <div className='d-flex p-4 mx-4 justify-content-center'>
+            <div className='p-2 m-4'>
                 <div className="form-check form-check-inline">
                     <input
                         className="form-check-input"
@@ -35,7 +37,7 @@ function SetupMenu() {
                         defaultChecked
                     />
                     <label className="form-check-label" htmlFor="inlineRadio1">
-                        Horizontal
+                        HORIZONTAL
                     </label>
                 </div>
                 <div className="form-check form-check-inline">
@@ -47,12 +49,13 @@ function SetupMenu() {
                         onClick={() => {actions.handleDirectionVertical()}}
                     />
                     <label className="form-check-label" htmlFor="inlineRadio2">
-                        Vertical
+                        VERTICAL
                     </label>
                 </div>
             </div>
+			</div>
 
-            <div className='d-flex justify-content-center' id="gamerBoard">
+            <div className='d-flex' id="gamerBoard">
                 <div className='board'>
                     {/* Sección de columnas */}
                     <div className='columns'>
@@ -202,12 +205,9 @@ function SetupMenu() {
                         <div id='pregame88' className='square' onClick={(e) => actions.handleBoatPlacement([8, 8])}></div>
                     </div>
                 </div>
-                <div className="footer fixed-bottom text-center">
-          Made with ❤️ by
-          <a href="https://github.com/Zagarsix"> Zagarsix</a>
-        </div>
             </div>
-        </>
+        </ div>
+		</>
     )
 }
 

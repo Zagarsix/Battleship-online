@@ -1,6 +1,14 @@
+html {
+    height: 100%;
+  }
+
 body{
-    background-image: url("https://wallpaperaccess.com/full/2835851.jpg");
+    background-image: url("https://www.wallpaperflare.com/static/279/791/689/world-of-warships-wargaming-net-ship-explosion-wallpaper.jpg");
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+    scroll-behavior: smooth;
 }
 
 /* Estilo del tablero */
@@ -10,7 +18,7 @@ body{
 }
 
 .row-counter{
-    height: 60px;
+    height: 40px;
     width: 20px;
     margin-right: 3px;
     margin-bottom: 1px;
@@ -20,7 +28,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: black;
-    color: blue;
+    color: orangered;
 }
 
 .columns{
@@ -30,38 +38,38 @@ body{
 
 .column-counter{
     height: 20px;
-    width: 60px;
+    width: 40px;
     margin-right: 2px;
     margin-bottom: 3px;
     font-weight: bold;
     text-align: center;
     background-color: black;
-    color: blue;
+    color: orangered;
 }
 
 /* Estilo de los cuadrados */
 .square{
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     margin-right: 2px;
     margin-bottom: 1px;
-    background-color: rgb(136, 136, 255);
+    background-color: rgb(167, 167, 235);
 }
 
 .miss{
-    background-color: rgba(5, 40, 156, 0.651);
+    background-image: linear-gradient(30deg, white, blue, rgb(25, 101, 140));
 }
 
 .hit{
-    background-color: red;
+    background-image: linear-gradient(90deg, orangered, black, grey);
 }
 
 .show{
-    border: 10px solid red;
+    border: 5px solid red;
 }
 
 .placed{
-    background-color: rgb(80, 11, 11);
+    background-image: linear-gradient(90deg, rgb(23, 21, 21), grey, black);
 }
 
 /* Espaciado de los tableros */
@@ -71,18 +79,34 @@ body{
     justify-content: space-between;
     margin-top: 0px;
     margin-bottom: 200px;
+    margin-left: 50px;
+    margin-right: 50px;
     padding: 30px;
 }
 
 #SuperTitle{
-    color: rgb(6, 73, 6);
-    text-shadow: 0 0 0.2em rgb(0, 172, 0), 0 0 0.2em green;
+    color: rgb(26, 9, 106);
+    text-shadow: 0 0 0.2em rgb(227, 101, 4), 0 0 0.2em rgb(255, 0, 0), 0 0 0.2em rgb(255, 0, 0);
+}
+.instruccions{
+color: orangered;
+-webkit-text-stroke: 1px black;
+
 }
 
 #gamerBoard{
     margin-bottom: 200px;
 }
 
-.footer{
-    font-weight: bold;
-}
+.footer {
+    background-color: black;
+    bottom: 0;
+    position: absolute fixed;
+    width: 100%;
+    height: auto;
+    color: #38b6ff !important;
+    border-color: rgb(156, 156, 156);
+    border-top-style: solid;
+    border-top-width: 1px;
+    font-size: 13px;
+  }
