@@ -253,13 +253,13 @@ function MainGame() {
 					<div className='board-header text-center' style={{ color: "green" }}>
 						<h2>TU TABLERO</h2>
 					</div>
-					<PlayerBoard />
+					<CPUBoard />
 				</div>
 				<div className='botboard'>
 					<div className='board-header text-center' style={{ color: "red" }}>
 						<h2>TABLERO ENEMIGO</h2>
 					</div>
-					<CPUBoard />
+					<PlayerBoard />
 				</div>
 			</div>
 		</>
